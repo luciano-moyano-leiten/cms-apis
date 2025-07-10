@@ -1,4 +1,4 @@
-/* //CONFIG DE LA API
+//CONFIG DE LA API
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -12,4 +12,3 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     ATRIBUTOS: `${API_BASE_URL}/ContentSettings/GetAtributosCMS`,
 };
 
- */

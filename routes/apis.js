@@ -1,6 +1,7 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
+import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig';
 
 dotenv.config();
 
@@ -17,7 +18,7 @@ const headers = {
 router.get('/carrousel', async (req, res) => {
   try {
     const idVista = req.query.IdVista || 4;
-    const url = `https://appcms.desarrollo.dnscheck.com.ar/ContentSettings/GetCarruselConfig?IdVista=${idVista}`;
+    const url = `${API_ENDPOINTS_CONTTENTSETTINGS.CARRUSEL}?IdVista=${idVista}`;
     const response = await fetch(url, {
       method: 'POST',
       headers
@@ -36,7 +37,7 @@ router.get('/banners', async (req, res) => {
     try {
         // Permitir pasar IdVista como query param, default a 15 si no se envía
         const idVista = req.query.IdVista || 15;
-        const url = `https://appcms.desarrollo.dnscheck.com.ar/ContentSettings/GetBannersVista?IdVista=${idVista}`;
+        const url = `${API_ENDPOINTS_CONTTENTSETTINGS.BANNERS}?IdVista=${idVista}`;
         const response = await fetch(url, { headers });
         const data = await response.json();
         res.json(data);
@@ -51,7 +52,7 @@ router.get('/menu', async (req, res) => {
         // Permitir pasar IdVista e IdMenu como query params, default a 15 y 4 si no se envían
         const idVista = req.query.IdVista || 15;
         const idMenu = req.query.IdMenu || 4;
-        const url = `https://appcms.desarrollo.dnscheck.com.ar/ContentSettings/ContentSettings/GetMenu/IdVista/${idVista}/IdMenu/${idMenu}`;
+        const url = `${API_ENDPOINTS_CONTTENTSETTINGS.MENU}/IdVista/${idVista}/IdMenu/${idMenu}`;
         const response = await fetch(url, { headers });
         const data = await response.json();
         res.json(data);
@@ -67,7 +68,7 @@ router.post('/atributos', async (req, res) => {
         const idVista = req.query.IdVista || req.body.IdVista || 15;
         const id = req.query.Id || req.body.Id || 4;
 
-        const url = `https://appcms.desarrollo.dnscheck.com.ar/ContentSettings/GetAtributosCMS?IdVista=${idVista}&Id=${id}`;
+        const url = `${API_ENDPOINTS_CONTTENTSETTINGS.ATRIBUTOS}?IdVista=${idVista}&Id=${id}`;
         
         const response = await fetch(url, {
             method: 'POST',
