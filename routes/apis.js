@@ -1,34 +1,34 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
-import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig';
+import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
 
 dotenv.config();
 
 const router = express.Router();
 
-const TOKEN = process.env.CMS_TOKEN; 
+const TOKEN = process.env.CMS_TOKEN;
 console.log('Token CMS:', process.env.CMS_TOKEN);
 const headers = {
-  'Authorization': `${TOKEN}`,
-  'Content-Type': 'application/json'
+    'Authorization': `${TOKEN}`,
+    'Content-Type': 'application/json'
 };
 
 // CARRUSEL
 router.get('/carrousel', async (req, res) => {
-  try {
-    const idVista = req.query.IdVista || 4;
-    const url = `${API_ENDPOINTS_CONTTENTSETTINGS.CARRUSEL}?IdVista=${idVista}`;
-    const response = await fetch(url, {
-      method: 'POST',
-      headers
-    });
-    console.log('STATUS:', response.status);
-    const data = await response.json();
-    res.json(data);
-  } catch (err) {
-    res.status(500).json({ error: 'Error al obtener el carrusel', detail: err.message });
-  }
+    try {
+        const idVista = req.query.IdVista || 4;
+        const url = `${API_ENDPOINTS_CONTTENTSETTINGS.CARRUSEL}?IdVista=${idVista}`;
+        const response = await fetch(url, {
+            method: 'POST',
+            headers
+        });
+        console.log('STATUS:', response.status);
+        const data = await response.json();
+        res.json(data);
+    } catch (err) {
+        res.status(500).json({ error: 'Error al obtener el carrusel', detail: err.message });
+    }
 });
 
 
@@ -69,7 +69,7 @@ router.post('/atributos', async (req, res) => {
         const id = req.query.Id || req.body.Id || 4;
 
         const url = `${API_ENDPOINTS_CONTTENTSETTINGS.ATRIBUTOS}?IdVista=${idVista}&Id=${id}`;
-        
+
         const response = await fetch(url, {
             method: 'POST',
             headers,
@@ -88,5 +88,15 @@ router.post('/atributos', async (req, res) => {
         res.status(500).json({ error: 'Error al obtener los atributos', detail: err.message });
     }
 });
+
+// ECHO - Devuelve lo que recibe por query o body
+router.all('/eco', (req, res) => {
+    res.json({
+        method: req.method,
+        query: req.query,
+        body: req.body
+    });
+});
+
 
 export default router;
