@@ -7,7 +7,7 @@ export class BannersFactory extends CMSFactoryInterface {
   }
 
   createLogger() {
-    return () => console.log('[CarrouselFactory] Ejecutando banners');
+    return () => console.log('[BannersFactory] Ejecutando banners');
   }
 
   createValidator() {

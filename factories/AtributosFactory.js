@@ -1,13 +1,13 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
 import { handleAtributos } from '../handlers/atributosHandler.js';
 
-export class AtributoslFactory extends CMSFactoryInterface {
+export class AtributosFactory extends CMSFactoryInterface {
   createHandler() {
     return handleAtributos;
   }
 
   createLogger() {
-    return () => console.log('[CarrouselFactory] Ejecutando atributos');
+    return () => console.log('[AtributosFactory] Ejecutando atributos');
   }
 
   createValidator() {

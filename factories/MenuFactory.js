@@ -7,7 +7,7 @@ export class MenuFactory extends CMSFactoryInterface {
   }
 
   createLogger() {
-    return () => console.log('[CarrouselFactory] Ejecutando menu');
+    return () => console.log('[MenuFactory] Ejecutando menu');
   }
 
   createValidator() {
