@@ -1,0 +1,12 @@
+import fetch from 'node-fetch';
+import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
+import { getHeaders } from './utils/getHeaders.js';
+const TOKEN = process.env.CMS_TOKEN;
+
+export const handleBanners = async ({ IdVista }) => {
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.BANNERS}?IdVista=${IdVista || 15}`;
+  const response = await fetch(url, { headers: getHeaders() });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data);
+  return data;
+};
