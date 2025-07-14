@@ -4,7 +4,7 @@ import { CarrouselFactory } from '../factories/CarrouselFactory.js';
 import { BannersFactory } from '../factories/BannersFactory.js';
 import { MenuFactory } from '../factories/MenuFactory.js';
 import { AtributosFactory } from '../factories/AtributosFactory.js';
-import { handleCarrousel } from '../handlers/carrouselHandler.js';
+
 const router = express.Router();
 
 // Registrar factories
@@ -29,12 +29,52 @@ router.all('/', async (req, res) => {
     // }
 
     logger();
-    const data = await handler({ IdVista, IdMenu, Id });
+    const data = await handler({ IdVista, IdMenu, Id, body: req.body });
+
     res.json(data);
 
   } catch (err) {
     res.status(500).json({ error: 'Error ejecutando comando', detail: err.message });
   }
 });
+
+router.all('/gets', async (req, res) => {
+  const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;
+
+  const typeArray = typeof type === 'string'
+    ? type.split(',').map(t => t.trim())
+    : Array.isArray(type)
+      ? type
+      : [];
+
+  try {
+    const results = {};
+
+    for (const currentType of typeArray) {
+      try {
+        const factory = CMSAbstractFactory.get(currentType);
+        const validator = factory.createValidator();
+        const logger = factory.createLogger();
+        const handler = factory.createHandler();
+
+        logger();
+        const data = await handler({ IdVista, IdMenu, Id, body: req.body });
+
+        results[currentType] = data;
+      } catch (errInterno) {
+        results[currentType] = {
+          error: `Falló el handler para '${currentType}'`,
+          detail: errInterno.message
+        };
+      }
+    }
+
+    res.json(results);
+
+  } catch (err) {
+    res.status(500).json({ error: 'Error ejecutando múltiples comandos', detail: err.message });
+  }
+});
+
 
 export default router;
