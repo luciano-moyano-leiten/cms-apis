@@ -1,4 +1,4 @@
-import express from 'express';
+/* import express from 'express';
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
@@ -98,7 +98,7 @@ router.all('/eco', (req, res) => {
     });
 });
 
-/* router.get('/health', (req, res) => {
+router.get('/health', (req, res) => {
     const idVista = req.query.idVista ;
     const idMenu = req.query.idMenu ;
     res.json({
@@ -107,6 +107,7 @@ router.all('/eco', (req, res) => {
         idMenu
     });
 });
- */
+
 
 export default router;
+ */

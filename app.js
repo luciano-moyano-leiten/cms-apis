@@ -9,9 +9,9 @@ import createError from 'http-errors';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
-import indexRouter from './routes/index.js';
-import usersRouter from './routes/users.js';
-import apisRouter from './routes/apis.js';
+//import indexRouter from './routes/index.js';
+//import usersRouter from './routes/users.js';
+//import apisRouter from './routes/apis.js';
 
 import commandRouter from './routes/command.js';
 
@@ -25,9 +25,9 @@ app.use(cookieParser());
 app.use(express.static(join(__dirname, 'public')));
 
 // Rutas
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/api', apisRouter);
+//app.use('/', indexRouter);
+//app.use('/users', usersRouter);
+//app.use('/api', apisRouter);
 app.use('/command', commandRouter);
 
 
