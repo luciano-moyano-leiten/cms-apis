@@ -10,7 +10,7 @@ export const handleCarrousel = async ({ IdVista }) => {
     const response = await fetch(url, {
         method: 'POST',
         headers: {
-            'Authorization': `702de3e9-9f5e-4509-a29a-9a009c4d6801`,
+            'Authorization': `e12a921f-e10c-4e11-82d6-7301e53bf46e`,
             'Content-Type': 'application/json'
         }
     });

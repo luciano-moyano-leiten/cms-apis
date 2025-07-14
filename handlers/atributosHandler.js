@@ -7,18 +7,16 @@ export const handleAtributos = async ({ IdVista, Id, body }) => {
 
   const url = `${API_ENDPOINTS_CONTTENTSETTINGS.ATRIBUTOS}?IdVista=${vista}&Id=${id}`;
 
-  // Aseguramos que siempre se envíe 'filtros' como un array
-  const requestBody = {
-    filtros: body?.filtros || [{ key : "", value : "" }],
-  };
+  // Este body debe ser un array directo (según el Swagger)
+  const filtros = Array.isArray(body?.filtros) ? body.filtros : [];
 
   const response = await fetch(url, {
     method: 'POST',
     headers: {
-      'Authorization': '702de3e9-9f5e-4509-a29a-9a009c4d6801',
+      'Authorization': 'e12a921f-e10c-4e11-82d6-7301e53bf46e',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(requestBody)
+    body: JSON.stringify(filtros)
   });
 
   const data = await response.json();
