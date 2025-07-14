@@ -12,3 +12,6 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     ATRIBUTOS: `${API_BASE_URL}/ContentSettings/GetAtributosCMS`,
 };
 
+export const API_ENDPOINTS_ATRIBUTOS = {
+    ATRIBUTOS: `${API_BASE_URL}/Atributos/ActualizarAtributos`,
+}

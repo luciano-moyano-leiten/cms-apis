@@ -4,6 +4,7 @@ import { CarrouselFactory } from '../factories/CarrouselFactory.js';
 import { BannersFactory } from '../factories/BannersFactory.js';
 import { MenuFactory } from '../factories/MenuFactory.js';
 import { AtributosFactory } from '../factories/AtributosFactory.js';
+import { ActualizarAtributosFactory } from '../factories/ActualizarAtributosFactory.js';
 
 const router = express.Router();
 
@@ -12,6 +13,8 @@ CMSAbstractFactory.register('carrousel', new CarrouselFactory());
 CMSAbstractFactory.register('banners', new BannersFactory());
 CMSAbstractFactory.register('menu', new MenuFactory());
 CMSAbstractFactory.register('atributos', new AtributosFactory());
+CMSAbstractFactory.register('actualizarAtributos', new ActualizarAtributosFactory());
+
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;
