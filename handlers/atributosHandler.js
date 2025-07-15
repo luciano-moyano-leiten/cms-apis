@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
+import { getToken } from './utils/tokenManager.js';
 
 export const handleAtributos = async ({ IdVista, Id, body }) => {
   const vista = IdVista;
@@ -13,7 +14,7 @@ export const handleAtributos = async ({ IdVista, Id, body }) => {
   const response = await fetch(url, {
     method: 'POST',
     headers: {
-      'Authorization': 'e12a921f-e10c-4e11-82d6-7301e53bf46e',
+      'Authorization': getToken(),
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(filtros)
@@ -27,3 +28,5 @@ export const handleAtributos = async ({ IdVista, Id, body }) => {
 
   return data;
 };
+
+

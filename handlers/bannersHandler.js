@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
 import { getHeaders } from './utils/getHeaders.js';
+import { getToken } from './utils/tokenManager.js';
 const TOKEN = process.env.CMS_TOKEN;
 
 export const handleBanners = async ({ IdVista }) => {
@@ -10,7 +11,7 @@ export const handleBanners = async ({ IdVista }) => {
   const response = await fetch(url, {
     method: 'GET',
     headers: {
-      'Authorization':`e12a921f-e10c-4e11-82d6-7301e53bf46e`,
+      'Authorization':getToken(),
       'Content-Type': 'application/json'
     }
   });
