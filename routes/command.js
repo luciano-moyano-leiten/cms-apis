@@ -6,6 +6,9 @@ import { MenuFactory } from '../factories/MenuFactory.js';
 import { AtributosFactory } from '../factories/AtributosFactory.js';
 import { ActualizarAtributosFactory } from '../factories/ActualizarAtributosFactory.js';
 import { ComparativoFactory } from '../factories/ComparativoFactory.js';
+import { VistasFactory } from '../factories/VistasFactory.js';
+
+
 const router = express.Router();
 
 // Registrar factories
@@ -15,6 +18,7 @@ CMSAbstractFactory.register('menu', new MenuFactory());
 CMSAbstractFactory.register('atributos', new AtributosFactory());
 CMSAbstractFactory.register('actualizarAtributos', new ActualizarAtributosFactory());
 CMSAbstractFactory.register('comparativo', new ComparativoFactory()); 
+CMSAbstractFactory.register('vistas', new VistasFactory());
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;
@@ -62,6 +66,10 @@ router.all('/gets', async (req, res) => {
 
         logger();
         const data = await handler({ IdVista, IdMenu, Id, body: req.body });
+        //const data = await handler.length === 0
+  //? await handler()
+ // : await handler({ IdVista, IdMenu, Id, body: req.body });
+
 
         results[currentType] = data;
       } catch (errInterno) {
