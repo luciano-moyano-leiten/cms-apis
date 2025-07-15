@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleMenu } from '../handlers/menuHandler.js';
+import { handleMenu } from '../handlers/getMenuHandler.js';
 
 export class MenuFactory extends CMSFactoryInterface {
   createHandler() {
@@ -7,10 +7,10 @@ export class MenuFactory extends CMSFactoryInterface {
   }
 
   createLogger() {
-    return () => console.log('[MenuFactory] Ejecutando menu');
+    return () => console.log('[MenuFactory] Ejecutando handler de Menú');
   }
 
   createValidator() {
-    return (params) => !!params.IdVista;
+    return (params) => !!params.IdVista && params.IdMenu !== undefined;
   }
 }

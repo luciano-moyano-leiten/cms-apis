@@ -12,7 +12,9 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     ATRIBUTOS: `${API_BASE_URL}/ContentSettings/GetAtributosCMS`,
     COMPARATIVO: `${API_BASE_URL}/ContentSettings/GetComparativoProducto`,
     VISTAS: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVistas`,
-    VISTA: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVista/IdVista`
+    VISTA: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVista/IdVista`,
+    MENU: `${API_BASE_URL}/ContentSettings/ContentSettings/GetMenu`,
+    DELETE_TIPO_CONTENIDO: `${API_BASE_URL}/ContentSettings/DeleteTipoContenido`
 
 };
 
