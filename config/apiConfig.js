@@ -12,6 +12,8 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     ATRIBUTOS: `${API_BASE_URL}/ContentSettings/GetAtributosCMS`,
     COMPARATIVO: `${API_BASE_URL}/ContentSettings/GetComparativoProducto`,
     VISTAS: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVistas`,
+    VISTA: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVista/IdVista`
+
 };
 
 export const API_ENDPOINTS_ATRIBUTOS = {
