@@ -10,7 +10,7 @@ import { VistasFactory } from '../factories/VistasFactory.js';
 import { VistaFactory } from '../factories/VistaFactory.js';
 import { MenuFactory } from '../factories/MenuFactory.js';
 import { DeleteTipoContenidoFactory } from '../factories/DeleteTipoContenidoFactory.js';
-
+import { DeleteImagenFactory } from '../factories/DeleteImagenFactory.js';
 
 const router = express.Router();
 
@@ -25,6 +25,8 @@ CMSAbstractFactory.register('vistas', new VistasFactory());
 CMSAbstractFactory.register('vista', new VistaFactory());
 CMSAbstractFactory.register('menu', new MenuFactory());
 CMSAbstractFactory.register('deleteTipoContenido', new DeleteTipoContenidoFactory());
+CMSAbstractFactory.register('deleteImagen', new DeleteImagenFactory());
+
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;
