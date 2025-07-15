@@ -15,6 +15,7 @@ export const handleCarrousel = async ({ IdVista }) => {
             'Content-Type': 'application/json'
         }
     });
+    console.log(response, 'response');
     const data = await response.json();
     if (!response.ok) {
         throw new Error(`Error al obtener carrousel: ${JSON.stringify(data)}`);

@@ -5,7 +5,7 @@ import { BannersFactory } from '../factories/BannersFactory.js';
 import { MenuFactory } from '../factories/MenuFactory.js';
 import { AtributosFactory } from '../factories/AtributosFactory.js';
 import { ActualizarAtributosFactory } from '../factories/ActualizarAtributosFactory.js';
-
+import { ComparativoFactory } from '../factories/ComparativoFactory.js';
 const router = express.Router();
 
 // Registrar factories
@@ -14,7 +14,7 @@ CMSAbstractFactory.register('banners', new BannersFactory());
 CMSAbstractFactory.register('menu', new MenuFactory());
 CMSAbstractFactory.register('atributos', new AtributosFactory());
 CMSAbstractFactory.register('actualizarAtributos', new ActualizarAtributosFactory());
-
+CMSAbstractFactory.register('comparativo', new ComparativoFactory()); 
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;

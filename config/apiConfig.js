@@ -10,6 +10,7 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     BANNERS: `${API_BASE_URL}/ContentSettings/GetBannersVista`,
     MENU: `${API_BASE_URL}/ContentSettings/ContentSettings/GetMenu`,
     ATRIBUTOS: `${API_BASE_URL}/ContentSettings/GetAtributosCMS`,
+    COMPARATIVO: `${API_BASE_URL}/ContentSettings/GetComparativoProducto`,
 };
 
 export const API_ENDPOINTS_ATRIBUTOS = {

@@ -1,5 +1,5 @@
-let token = process.env.CMS_TOKEN || '339b8931-7e05-4f4e-9f43-64d5285664bd';
-
+let token = process.env.CMS_TOKEN || 'c5d4e348-5365-4b24-bc07-a7d55cc2f5f6';
+console.log(`Token inicial: ${token}`);
 export const getToken = () => token;
 
 export const setToken = (newToken) => {
