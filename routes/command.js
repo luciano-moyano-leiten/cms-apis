@@ -24,6 +24,7 @@ import { GetEventosFactory } from '../factories/GetEventosFactory.js';
 import { GetFichaProductoFactory } from '../factories/GetFichaProductoFactory.js';
 import { GetImagenFactory } from '../factories/GetImagenFactory.js';
 import { GetImagenByIdImagenFactory } from '../factories/GetImagenByIdImagenFactory.js';
+import { GetImagenesFactory } from '../factories/GetImagenesFactory.js';
 
 
 
@@ -54,6 +55,7 @@ CMSAbstractFactory.register('getEventos', new GetEventosFactory());
 CMSAbstractFactory.register('getFichaProducto', new GetFichaProductoFactory());
 CMSAbstractFactory.register('getImagen', new GetImagenFactory());
 CMSAbstractFactory.register('getImagenByIdImagen', new GetImagenByIdImagenFactory());
+CMSAbstractFactory.register('getImagenes', new GetImagenesFactory());
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;

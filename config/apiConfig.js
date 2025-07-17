@@ -21,6 +21,7 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     GET_FICHA_PRODUCTO: `${API_BASE_URL}/ContentSettings/GetFichaProducto`,
     GET_IMAGEN: `${API_BASE_URL}/ContentSettings/GetImagen`,
     GET_IMAGEN_BY_ID_IMAGEN: `${API_BASE_URL}/ContentSettings/GetImagenByIdImagen`,
+    GET_IMAGENES: `${API_BASE_URL}/ContentSettings/GetImagenes`,
 
 
 };
