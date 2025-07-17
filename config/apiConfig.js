@@ -18,6 +18,9 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     GET_CONTENIDO_FICHA_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaItem`,
     GET_CONTENIDO_FICHA_SUCURSAL_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaSucursalItem`,
     GET_EVENTOS: `${API_BASE_URL}/ContentSettings/GetEventos`,
+    GET_FICHA_PRODUCTO: `${API_BASE_URL}/ContentSettings/GetFichaProducto`,
+    GET_IMAGEN: `${API_BASE_URL}/ContentSettings/GetImagen`,
+    GET_IMAGEN_BY_ID_IMAGEN: `${API_BASE_URL}/ContentSettings/GetImagenByIdImagen`,
 
 
 };
