@@ -21,8 +21,8 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
 };
 
 export const API_ENDPOINTS_ATRIBUTOS = {
-   POST_ATRIBUTOS: `${API_BASE_URL}/Atributos/ActualizarAtributos`,
-   GET_ATRIBUTOS: `${API_BASE_URL}/Atributos/GetAtributos`,
-   DELETE_ATRIBUTO: `${API_BASE_URL}/Atributos/DeleteAtributo/IdAtributo`,
-
+    POST_ATRIBUTOS: `${API_BASE_URL}/Atributos/ActualizarAtributos`,
+    GET_ATRIBUTOS: `${API_BASE_URL}/Atributos/GetAtributos`,
+    DELETE_ATRIBUTO: `${API_BASE_URL}/Atributos/DeleteAtributo/IdAtributo`,
+    GET_MARCAS: `${API_BASE_URL}/Atributos/GetMarcas`,
 }

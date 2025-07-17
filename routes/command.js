@@ -14,7 +14,7 @@ import { ContenidoFichaItemFactory } from '../factories/ContenidoFichaItemFactor
 import { ContenidoFichaSucursalItemFactory } from '../factories/ContenidoFichaSucursalItemFactory.js';  
 import { GetAtributosFactory } from '../factories/GetAtributosFactory.js';
 import { DeleteAtributoFactory } from '../factories/DeleteAtributoFactory.js';
-
+import { GetMarcasFactory } from '../factories/GetMarcasFactory.js';
 
 const router = express.Router();
 
@@ -33,6 +33,7 @@ CMSAbstractFactory.register('contenidoFichaItem', new ContenidoFichaItemFactory(
 CMSAbstractFactory.register('contenidoFichaSucursalItem', new ContenidoFichaSucursalItemFactory());
 CMSAbstractFactory.register('getAtributos', new GetAtributosFactory());
 CMSAbstractFactory.register('deleteAtributo', new DeleteAtributoFactory());
+CMSAbstractFactory.register('getMarcas', new GetMarcasFactory());
 
 
 router.all('/', async (req, res) => {
