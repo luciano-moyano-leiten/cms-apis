@@ -47,6 +47,11 @@ export const API_ENDPOINTS_ATRIBUTOS = {
 }
 
 export const API_ENDPOINTS_UNIDAD_MEDIDA = {
-  // otros endpoints...
   GET_UNIDADES_MEDIDA: `${API_BASE_URL}/UnidadesMedida/GetUnidadesMedida`,
+};
+
+export const API_ENDPOINTS_REGLAS_VALIDACION_ATRIBUTOS = {
+    GET: `${API_BASE_URL}/Atributos/GetReglaValidacionAtributos`,
+    POST: `${API_BASE_URL}/Atributos/ActualizarReglaValidacionAtributo`,
+    DELETE: `${API_BASE_URL}/Atributos/DeleteReglaValidacionAtributo`
 };

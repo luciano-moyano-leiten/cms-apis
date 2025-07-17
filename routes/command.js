@@ -33,7 +33,7 @@ import { GetVideosVistaFactory } from '../factories/GetVideosVistaFactory.js';
 import { SetImagenFactory } from '../factories/SetImagenFactory.js';
 import { SetTipoContenidoFactory } from '../factories/SetTipoContenidoFactory.js';
 import { GetUnidadesMedidaFactory } from '../factories/GetUnidadesMedidaFactory.js';
-
+import { GetReglaValidacionAtributosFactory } from '../factories/GetReglaValidacionAtributosFactory.js';
 
 
 const router = express.Router();
@@ -72,7 +72,7 @@ CMSAbstractFactory.register('getVideosVista', new GetVideosVistaFactory());
 CMSAbstractFactory.register('setImagen', new SetImagenFactory());
 CMSAbstractFactory.register('setTipoContenido', new SetTipoContenidoFactory());
 CMSAbstractFactory.register('getUnidadesMedida', new GetUnidadesMedidaFactory());
-
+CMSAbstractFactory.register('getReglaValidacionAtributos', new GetReglaValidacionAtributosFactory());
 
 
 
