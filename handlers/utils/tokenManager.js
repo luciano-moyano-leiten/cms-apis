@@ -1,4 +1,4 @@
-let token = process.env.CMS_TOKEN || 'c5d4e348-5365-4b24-bc07-a7d55cc2f5f6';
+let token = process.env.CMS_TOKEN || '13589872-0a57-4130-a501-e6c756ba7d25';
 console.log(`Token inicial: ${token}`);
 export const getToken = () => token;
 

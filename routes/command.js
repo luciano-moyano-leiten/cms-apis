@@ -2,7 +2,6 @@ import express from 'express';
 import { CMSAbstractFactory } from '../factories/CMSAbstractFactory.js';
 import { CarrouselFactory } from '../factories/CarrouselFactory.js';
 import { BannersFactory } from '../factories/BannersFactory.js';
-import { MenuFactory } from '../factories/MenuFactory.js';
 import { AtributosFactory } from '../factories/AtributosFactory.js';
 import { ActualizarAtributosFactory } from '../factories/ActualizarAtributosFactory.js';
 import { ComparativoFactory } from '../factories/ComparativoFactory.js';
@@ -11,13 +10,17 @@ import { VistaFactory } from '../factories/VistaFactory.js';
 import { MenuFactory } from '../factories/MenuFactory.js';
 import { DeleteTipoContenidoFactory } from '../factories/DeleteTipoContenidoFactory.js';
 import { DeleteImagenFactory } from '../factories/DeleteImagenFactory.js';
+import { ContenidoFichaItemFactory } from '../factories/ContenidoFichaItemFactory.js';
+import { ContenidoFichaSucursalItemFactory } from '../factories/ContenidoFichaSucursalItemFactory.js';  
+import { GetAtributosFactory } from '../factories/GetAtributosFactory.js';
+import { DeleteAtributoFactory } from '../factories/DeleteAtributoFactory.js';
+
 
 const router = express.Router();
 
 // Registrar factories
 CMSAbstractFactory.register('carrousel', new CarrouselFactory());
 CMSAbstractFactory.register('banners', new BannersFactory());
-CMSAbstractFactory.register('menu', new MenuFactory());
 CMSAbstractFactory.register('atributos', new AtributosFactory());
 CMSAbstractFactory.register('actualizarAtributos', new ActualizarAtributosFactory());
 CMSAbstractFactory.register('comparativo', new ComparativoFactory()); 
@@ -26,6 +29,10 @@ CMSAbstractFactory.register('vista', new VistaFactory());
 CMSAbstractFactory.register('menu', new MenuFactory());
 CMSAbstractFactory.register('deleteTipoContenido', new DeleteTipoContenidoFactory());
 CMSAbstractFactory.register('deleteImagen', new DeleteImagenFactory());
+CMSAbstractFactory.register('contenidoFichaItem', new ContenidoFichaItemFactory());
+CMSAbstractFactory.register('contenidoFichaSucursalItem', new ContenidoFichaSucursalItemFactory());
+CMSAbstractFactory.register('getAtributos', new GetAtributosFactory());
+CMSAbstractFactory.register('deleteAtributo', new DeleteAtributoFactory());
 
 
 router.all('/', async (req, res) => {

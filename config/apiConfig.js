@@ -15,9 +15,14 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     VISTA: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVista/IdVista`,
     MENU: `${API_BASE_URL}/ContentSettings/ContentSettings/GetMenu`,
     DELETE_TIPO_CONTENIDO: `${API_BASE_URL}/ContentSettings/DeleteTipoContenido`,
-    DELETE_IMAGEN: `${API_BASE_URL}/ContentSettings/DeleteImagen`
+    DELETE_IMAGEN: `${API_BASE_URL}/ContentSettings/DeleteImagen`,
+    CONTENIDO_FICHA_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaItem`,
+    CONTENIDO_FICHA_SUCURSAL_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaSucursalItem`,
 };
 
 export const API_ENDPOINTS_ATRIBUTOS = {
-    ATRIBUTOS: `${API_BASE_URL}/Atributos/ActualizarAtributos`,
+   POST_ATRIBUTOS: `${API_BASE_URL}/Atributos/ActualizarAtributos`,
+   GET_ATRIBUTOS: `${API_BASE_URL}/Atributos/GetAtributos`,
+   DELETE_ATRIBUTO: `${API_BASE_URL}/Atributos/DeleteAtributo/IdAtributo`,
+
 }
