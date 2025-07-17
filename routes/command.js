@@ -28,6 +28,10 @@ import { GetImagenesFactory } from '../factories/GetImagenesFactory.js';
 import { GetItemsFactory } from '../factories/GetItemsFactory.js';
 import { GetMimeTypesFactory } from '../factories/GetMimeTypesFactory.js';
 import { GetTiposContenidoFactory } from '../factories/GetTiposContenidoFactory.js';
+import {GetTiposContenido1Factory } from '../factories/GetTiposContenido1Factory.js';
+
+
+
 
 const router = express.Router();
 
@@ -60,6 +64,14 @@ CMSAbstractFactory.register('getImagenes', new GetImagenesFactory());
 CMSAbstractFactory.register('getItems', new GetItemsFactory());
 CMSAbstractFactory.register('getMimeTypes', new GetMimeTypesFactory());
 CMSAbstractFactory.register('getTiposContenido', new GetTiposContenidoFactory());
+CMSAbstractFactory.register('getTiposContenido1', new GetTiposContenido1Factory());
+
+
+
+
+
+
+
 
 
 router.all('/', async (req, res) => {

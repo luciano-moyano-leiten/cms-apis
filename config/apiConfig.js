@@ -24,6 +24,8 @@ export const API_ENDPOINTS_CONTTENTSETTINGS = {
     GET_IMAGENES: `${API_BASE_URL}/ContentSettings/GetImagenes`,
     GET_ITEMS: `${API_BASE_URL}/ContentSettings/GetItems`,
     GET_MIME_TYPES: `${API_BASE_URL}/ContentSettings/GetMimeTypes`,
+    GET_TIPOS_CONTENIDO: `${API_BASE_URL}/ContentSettings/GetTiposContenido`,
+    GET_TIPOS_CONTENIDO_1: `${API_BASE_URL}/ContentSettings/GetTiposContenido1`,
 
 
 };
