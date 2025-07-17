@@ -25,4 +25,11 @@ export const API_ENDPOINTS_ATRIBUTOS = {
     GET_ATRIBUTOS: `${API_BASE_URL}/Atributos/GetAtributos`,
     DELETE_ATRIBUTO: `${API_BASE_URL}/Atributos/DeleteAtributo/IdAtributo`,
     GET_MARCAS: `${API_BASE_URL}/Atributos/GetMarcas`,
+    GET_GRUPOS_PRODUCTOS: `${API_BASE_URL}/Atributos/GetGruposProductos`,
+    GET_SEGMENTOS: `${API_BASE_URL}/Atributos/GetSegmentos`,
+    GET_TIPOS_PRODUCTO: `${API_BASE_URL}/Atributos/GetTiposProducto`,
+    GET_MOTORIZACIONES_PRODUCTOS: `${API_BASE_URL}/Atributos/GetMotorizacionesProductos`,
+    GET_CATEGORIA_PRODUCTO: `${API_BASE_URL}/Atributos/GetCategoriaProducto`,
+
+
 }

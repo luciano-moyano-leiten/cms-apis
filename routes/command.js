@@ -15,6 +15,12 @@ import { ContenidoFichaSucursalItemFactory } from '../factories/ContenidoFichaSu
 import { GetAtributosFactory } from '../factories/GetAtributosFactory.js';
 import { DeleteAtributoFactory } from '../factories/DeleteAtributoFactory.js';
 import { GetMarcasFactory } from '../factories/GetMarcasFactory.js';
+import { GetGruposProductosFactory } from '../factories/GetGruposProductosFactory.js';
+import { GetSegmentosFactory } from '../factories/GetSegmentosFactory.js';
+import { GetTiposProductoFactory } from '../factories/GetTiposProductoFactory.js';
+import { GetMotorizacionesProductosFactory } from '../factories/GetMotorizacionesProductosFactory.js';
+import { GetCategoriaProductoFactory } from '../factories/GetCategoriaProductoFactory.js';
+
 
 const router = express.Router();
 
@@ -34,7 +40,11 @@ CMSAbstractFactory.register('contenidoFichaSucursalItem', new ContenidoFichaSucu
 CMSAbstractFactory.register('getAtributos', new GetAtributosFactory());
 CMSAbstractFactory.register('deleteAtributo', new DeleteAtributoFactory());
 CMSAbstractFactory.register('getMarcas', new GetMarcasFactory());
-
+CMSAbstractFactory.register('getGruposProductos', new GetGruposProductosFactory());
+CMSAbstractFactory.register('getSegmentos', new GetSegmentosFactory());
+CMSAbstractFactory.register('getTiposProducto', new GetTiposProductoFactory());
+CMSAbstractFactory.register('getMotorizacionesProductos', new GetMotorizacionesProductosFactory());
+CMSAbstractFactory.register('getCategoriaProducto', new GetCategoriaProductoFactory());
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;
