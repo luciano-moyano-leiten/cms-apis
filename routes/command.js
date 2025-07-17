@@ -30,6 +30,8 @@ import { GetMimeTypesFactory } from '../factories/GetMimeTypesFactory.js';
 import { GetTiposContenidoFactory } from '../factories/GetTiposContenidoFactory.js';
 import {GetTiposContenido1Factory } from '../factories/GetTiposContenido1Factory.js';
 import { GetVideosVistaFactory } from '../factories/GetVideosVistaFactory.js';
+import { SetImagenFactory } from '../factories/SetImagenFactory.js';
+import { SetTipoContenidoFactory } from '../factories/SetTipoContenidoFactory.js';
 
 
 
@@ -67,8 +69,8 @@ CMSAbstractFactory.register('getMimeTypes', new GetMimeTypesFactory());
 CMSAbstractFactory.register('getTiposContenido', new GetTiposContenidoFactory());
 CMSAbstractFactory.register('getTiposContenido1', new GetTiposContenido1Factory());
 CMSAbstractFactory.register('getVideosVista', new GetVideosVistaFactory());
-
-
+CMSAbstractFactory.register('setImagen', new SetImagenFactory());
+CMSAbstractFactory.register('setTipoContenido', new SetTipoContenidoFactory());
 
 
 
