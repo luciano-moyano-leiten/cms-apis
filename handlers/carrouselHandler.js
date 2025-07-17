@@ -6,7 +6,7 @@ const TOKEN = process.env.CMS_TOKEN;
 
 export const handleCarrousel = async ({ IdVista }) => {
     const vista = IdVista;
-    const url = `${API_ENDPOINTS_CONTTENTSETTINGS.CARRUSEL}?IdVista=${vista}`;
+    const url = `${API_ENDPOINTS_CONTTENTSETTINGS.POST_CARRUSEL}?IdVista=${vista}`;
     // const response = await fetch(url, { headers: getHeaders() });
     const response = await fetch(url, {
         method: 'POST',

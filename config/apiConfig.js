@@ -6,18 +6,20 @@ dotenv.config();
 export const API_BASE_URL = process.env.API_BASE_URL;
 
 export const API_ENDPOINTS_CONTTENTSETTINGS = {
-    CARRUSEL: `${API_BASE_URL}/ContentSettings/GetCarruselConfig`,
-    BANNERS: `${API_BASE_URL}/ContentSettings/GetBannersVista`,
-    MENU: `${API_BASE_URL}/ContentSettings/ContentSettings/GetMenu`,
-    ATRIBUTOS: `${API_BASE_URL}/ContentSettings/GetAtributosCMS`,
-    COMPARATIVO: `${API_BASE_URL}/ContentSettings/GetComparativoProducto`,
-    VISTAS: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVistas`,
-    VISTA: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVista/IdVista`,
-    MENU: `${API_BASE_URL}/ContentSettings/ContentSettings/GetMenu`,
+    POST_CARRUSEL: `${API_BASE_URL}/ContentSettings/GetCarruselConfig`,
+    GET_BANNER_VISTA: `${API_BASE_URL}/ContentSettings/GetBannersVista`,
+    GET_ATRIBUTOS_CMS: `${API_BASE_URL}/ContentSettings/GetAtributosCMS`,
+    GET_COMPARATIVO_PRODUCTO: `${API_BASE_URL}/ContentSettings/GetComparativoProducto`,
+    GET_VISTAS: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVistas`,
+    GET_VISTA: `${API_BASE_URL}/ContentSettings/ContentSettings/GetVista/IdVista`,
+    GET_MENU: `${API_BASE_URL}/ContentSettings/ContentSettings/GetMenu`,
     DELETE_TIPO_CONTENIDO: `${API_BASE_URL}/ContentSettings/DeleteTipoContenido`,
     DELETE_IMAGEN: `${API_BASE_URL}/ContentSettings/DeleteImagen`,
-    CONTENIDO_FICHA_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaItem`,
-    CONTENIDO_FICHA_SUCURSAL_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaSucursalItem`,
+    GET_CONTENIDO_FICHA_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaItem`,
+    GET_CONTENIDO_FICHA_SUCURSAL_ITEM: `${API_BASE_URL}/ContentSettings/GetContenidoFichaSucursalItem`,
+    GET_EVENTOS: `${API_BASE_URL}/ContentSettings/GetEventos`,
+
+
 };
 
 export const API_ENDPOINTS_ATRIBUTOS = {
@@ -30,6 +32,5 @@ export const API_ENDPOINTS_ATRIBUTOS = {
     GET_TIPOS_PRODUCTO: `${API_BASE_URL}/Atributos/GetTiposProducto`,
     GET_MOTORIZACIONES_PRODUCTOS: `${API_BASE_URL}/Atributos/GetMotorizacionesProductos`,
     GET_CATEGORIA_PRODUCTO: `${API_BASE_URL}/Atributos/GetCategoriaProducto`,
-
-
+    GET_TIPOS_PRDUCTOS: `${API_BASE_URL}/Atributos/GetTiposProducto`,
 }

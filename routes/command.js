@@ -20,6 +20,7 @@ import { GetSegmentosFactory } from '../factories/GetSegmentosFactory.js';
 import { GetTiposProductoFactory } from '../factories/GetTiposProductoFactory.js';
 import { GetMotorizacionesProductosFactory } from '../factories/GetMotorizacionesProductosFactory.js';
 import { GetCategoriaProductoFactory } from '../factories/GetCategoriaProductoFactory.js';
+import { GetEventosFactory } from '../factories/GetEventosFactory.js';
 
 
 const router = express.Router();
@@ -45,6 +46,7 @@ CMSAbstractFactory.register('getSegmentos', new GetSegmentosFactory());
 CMSAbstractFactory.register('getTiposProducto', new GetTiposProductoFactory());
 CMSAbstractFactory.register('getMotorizacionesProductos', new GetMotorizacionesProductosFactory());
 CMSAbstractFactory.register('getCategoriaProducto', new GetCategoriaProductoFactory());
+CMSAbstractFactory.register('getEventos', new GetEventosFactory());
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;

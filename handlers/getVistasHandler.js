@@ -3,7 +3,7 @@ import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
 import { getToken } from './utils/tokenManager.js';
 
 export const handleVistas = async () => {
-  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.VISTAS}`;
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_VISTAS}`;
 
   const response = await fetch(url, {
     method: 'GET',

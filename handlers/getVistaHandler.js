@@ -7,7 +7,7 @@ export const handleVista = async ({ IdVista }) => {
     throw new Error('El parámetro IdVista es requerido.');
   }
 
-  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.VISTA}/${IdVista}`;
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_VISTA}/${IdVista}`;
 
   const response = await fetch(url, {
     method: 'GET',

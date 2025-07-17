@@ -7,7 +7,7 @@ export const handleMenu = async ({ IdVista, IdMenu }) => {
     throw new Error('Los parámetros IdVista e IdMenu son requeridos.');
   }
 
-  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.MENU}/IdVista/${IdVista}/IdMenu/${IdMenu}`;
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_MENU}/IdVista/${IdVista}/IdMenu/${IdMenu}`;
 
   const response = await fetch(url, {
     method: 'GET',

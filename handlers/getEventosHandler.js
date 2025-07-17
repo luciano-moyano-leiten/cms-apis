@@ -2,8 +2,8 @@ import fetch from 'node-fetch';
 import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
 import { getToken } from './utils/tokenManager.js';
 
-export const handleComparativo = async ({ IdVista, IdProducto }) => {
-  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_COMPARATIVO_PRODUCTO}?IdVista=${IdVista}&IdProducto=${IdProducto}`;
+export const handleGetEventos = async ({ IdVista }) => {
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_EVENTOS}?IdVista=${IdVista}`;
 
   const response = await fetch(url, {
     method: 'GET',
@@ -16,7 +16,7 @@ export const handleComparativo = async ({ IdVista, IdProducto }) => {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(`Error al obtener comparativo: ${JSON.stringify(data)}`);
+    throw new Error(`Error al obtener eventos: ${JSON.stringify(data)}`);
   }
 
   return data;

@@ -3,7 +3,7 @@ import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
 import { getToken } from './utils/tokenManager.js';
 
 export const handleContenidoFichaSucursalItem = async ({ IdVista }) => {
-  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.CONTENIDO_FICHA_SUCURSAL_ITEM}?IdVista=${IdVista}`;
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_CONTENIDO_FICHA_SUCURSAL_ITEM}?IdVista=${IdVista}`;
 
   const response = await fetch(url, {
     method: 'GET',

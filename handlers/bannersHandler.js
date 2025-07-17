@@ -6,7 +6,7 @@ const TOKEN = process.env.CMS_TOKEN;
 
 export const handleBanners = async ({ IdVista }) => {
   const vista = IdVista;
-  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.BANNERS}?IdVista=${vista}`;
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_BANNER_VISTA}?IdVista=${vista}`;
   //const response = await fetch(url, { headers: getHeaders() });
   const response = await fetch(url, {
     method: 'GET',

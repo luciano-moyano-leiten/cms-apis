@@ -6,7 +6,7 @@ export const handleAtributos = async ({ IdVista, Id, body }) => {
   const vista = IdVista;
   const id = Id;
 
-  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.ATRIBUTOS}?IdVista=${vista}&Id=${id}`;
+  const url = `${API_ENDPOINTS_CONTTENTSETTINGS.GET_ATRIBUTOS_CMS}?IdVista=${vista}&Id=${id}`;
 
   // Este body debe ser un array directo (según el Swagger)
   const filtros = Array.isArray(body?.filtros) ? body.filtros : [];
