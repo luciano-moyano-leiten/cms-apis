@@ -27,7 +27,7 @@ import { GetImagenByIdImagenFactory } from '../factories/GetImagenByIdImagenFact
 import { GetImagenesFactory } from '../factories/GetImagenesFactory.js';
 import { GetItemsFactory } from '../factories/GetItemsFactory.js';
 import { GetMimeTypesFactory } from '../factories/GetMimeTypesFactory.js';
-
+import { GetTiposContenidoFactory } from '../factories/GetTiposContenidoFactory.js';
 
 const router = express.Router();
 
@@ -59,7 +59,7 @@ CMSAbstractFactory.register('getImagenByIdImagen', new GetImagenByIdImagenFactor
 CMSAbstractFactory.register('getImagenes', new GetImagenesFactory());
 CMSAbstractFactory.register('getItems', new GetItemsFactory());
 CMSAbstractFactory.register('getMimeTypes', new GetMimeTypesFactory());
-
+CMSAbstractFactory.register('getTiposContenido', new GetTiposContenidoFactory());
 
 
 router.all('/', async (req, res) => {
