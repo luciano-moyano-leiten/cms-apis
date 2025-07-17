@@ -34,6 +34,8 @@ import { SetImagenFactory } from '../factories/SetImagenFactory.js';
 import { SetTipoContenidoFactory } from '../factories/SetTipoContenidoFactory.js';
 import { GetUnidadesMedidaFactory } from '../factories/GetUnidadesMedidaFactory.js';
 import { GetReglaValidacionAtributosFactory } from '../factories/GetReglaValidacionAtributosFactory.js';
+import { PostActualizarReglaValidacionAtributoFactory } from '../factories/PostActualizarReglaValidacionAtributoFactory.js';
+import { DeleteReglaValidacionAtributoFactory } from '../factories/DeleteReglaValidacionAtributoFactory.js';
 
 
 const router = express.Router();
@@ -73,8 +75,8 @@ CMSAbstractFactory.register('setImagen', new SetImagenFactory());
 CMSAbstractFactory.register('setTipoContenido', new SetTipoContenidoFactory());
 CMSAbstractFactory.register('getUnidadesMedida', new GetUnidadesMedidaFactory());
 CMSAbstractFactory.register('getReglaValidacionAtributos', new GetReglaValidacionAtributosFactory());
-
-
+CMSAbstractFactory.register('postActualizarReglaValidacionAtributo', new PostActualizarReglaValidacionAtributoFactory());
+CMSAbstractFactory.register('deleteReglaValidacionAtributo', new DeleteReglaValidacionAtributoFactory());
 
 
 router.all('/', async (req, res) => {
