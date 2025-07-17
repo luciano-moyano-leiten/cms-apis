@@ -3,7 +3,7 @@ import { handleGetAtributos } from '../handlers/getAtributosHandler.js';
 
 export class GetAtributosFactory extends CMSFactoryInterface {
   createHandler() {
-    return () => handleGetAtributos(); // sin params
+    return handleGetAtributos;
   }
 
   createLogger() {
@@ -11,6 +11,7 @@ export class GetAtributosFactory extends CMSFactoryInterface {
   }
 
   createValidator() {
-    return () => true; // no requiere parámetros
+    // No requiere validación de params, es un GET sin query
+    return () => true;
   }
 }

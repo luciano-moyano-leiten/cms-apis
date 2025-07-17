@@ -1,9 +1,9 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { getCategoriaProductoHandler } from '../handlers/getCategoriaProductoHandler.js';
+import { handleGetCategoriaProducto } from '../handlers/getCategoriaProductoHandler.js';
 
 export class GetCategoriaProductoFactory extends CMSFactoryInterface {
   createHandler() {
-    return getCategoriaProductoHandler;
+    return handleGetCategoriaProducto;
   }
 
   createLogger() {

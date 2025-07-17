@@ -45,3 +45,8 @@ export const API_ENDPOINTS_ATRIBUTOS = {
     GET_CATEGORIA_PRODUCTO: `${API_BASE_URL}/Atributos/GetCategoriaProducto`,
     GET_TIPOS_PRDUCTOS: `${API_BASE_URL}/Atributos/GetTiposProducto`,
 }
+
+export const API_ENDPOINTS_UNIDAD_MEDIDA = {
+  // otros endpoints...
+  GET_UNIDADES_MEDIDA: `${API_BASE_URL}/UnidadesMedida/GetUnidadesMedida`,
+};
