@@ -36,7 +36,7 @@ import { GetUnidadesMedidaFactory } from '../factories/GetUnidadesMedidaFactory.
 import { GetReglaValidacionAtributosFactory } from '../factories/GetReglaValidacionAtributosFactory.js';
 import { PostActualizarReglaValidacionAtributoFactory } from '../factories/PostActualizarReglaValidacionAtributoFactory.js';
 import { DeleteReglaValidacionAtributoFactory } from '../factories/DeleteReglaValidacionAtributoFactory.js';
-
+import { GetCentrosOperacionesFactory } from '../factories/GetCentrosOperacionesFactory.js';
 
 const router = express.Router();
 
@@ -77,7 +77,7 @@ CMSAbstractFactory.register('getUnidadesMedida', new GetUnidadesMedidaFactory())
 CMSAbstractFactory.register('getReglaValidacionAtributos', new GetReglaValidacionAtributosFactory());
 CMSAbstractFactory.register('postActualizarReglaValidacionAtributo', new PostActualizarReglaValidacionAtributoFactory());
 CMSAbstractFactory.register('deleteReglaValidacionAtributo', new DeleteReglaValidacionAtributoFactory());
-
+CMSAbstractFactory.register('getCentrosOperaciones', new GetCentrosOperacionesFactory());
 
 router.all('/', async (req, res) => {
   const { type, IdVista, IdMenu, Id } = req.method === 'GET' ? req.query : req.body;

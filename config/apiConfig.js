@@ -55,3 +55,7 @@ export const API_ENDPOINTS_REGLAS_VALIDACION_ATRIBUTOS = {
     POST: `${API_BASE_URL}/Atributos/ActualizarReglaValidacionAtributo`,
     DELETE: `${API_BASE_URL}/Atributos/DeleteReglaValidacionAtributo`
 };
+
+export const API_ENDOPOINT_CENTROS_OPERACIONES = {
+    GET_CENTROS_OPERACIONES: `${API_BASE_URL}/CentrosOperaciones/GetCentrosOperaciones`
+}
