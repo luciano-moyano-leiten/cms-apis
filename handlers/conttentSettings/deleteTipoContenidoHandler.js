@@ -17,7 +17,7 @@ export const handleDeleteTipoContenido = async ({ IdTipoContenido }) => {
     }
   });
 
-  const data = await response.text(); // puede que no devuelva JSON
+  const data = await response.text(); 
 
   if (!response.ok) {
     throw new Error(`Error al eliminar tipo de contenido: ${data}`);

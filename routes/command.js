@@ -88,11 +88,6 @@ router.all('/', async (req, res) => {
     const logger = factory.createLogger();
     const handler = factory.createHandler();
 
-    //const params = { IdVista, IdMenu, Id };
-
-    // if (!validator(params)) {
-    //   return res.status(400).json({ error: `Parámetros inválidos para tipo ${type}` });
-    // }
 
     logger();
     const data = await handler({ IdVista, IdMenu, Id, body: req.body });
@@ -125,9 +120,7 @@ router.all('/gets', async (req, res) => {
 
         logger();
         const data = await handler({ IdVista, IdMenu, Id, body: req.body });
-        //const data = await handler.length === 0
-  //? await handler()
- // : await handler({ IdVista, IdMenu, Id, body: req.body });
+        
 
 
         results[currentType] = data;

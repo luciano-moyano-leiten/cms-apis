@@ -17,7 +17,7 @@ export const handleDeleteImagen = async ({ IdMediaEntity }) => {
     }
   });
 
-  const data = await response.text(); // puede no ser JSON
+  const data = await response.text(); 
 
   if (!response.ok) {
     throw new Error(`Error al eliminar imagen: ${data}`);
