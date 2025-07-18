@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { API_ENDPOINTS_ATRIBUTOS } from '../config/apiConfig.js';
+import { API_ENDPOINTS_ATRIBUTOS } from '../../config/apiConfig.js';
 import { getToken } from '../utils/tokenManager.js';
 
 export const handleActualizarAtributos = async ({ IdVista, Id, body }) => {

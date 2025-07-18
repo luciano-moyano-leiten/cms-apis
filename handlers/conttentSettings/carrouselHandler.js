@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
-import { API_ENDPOINTS_CONTTENTSETTINGS } from '../config/apiConfig.js';
-import { getHeaders } from '../utils/getHeaders.js';
+import { API_ENDPOINTS_CONTTENTSETTINGS } from '../../config/apiConfig.js';
 import { getToken } from '../utils/tokenManager.js';
 const TOKEN = process.env.CMS_TOKEN;
 

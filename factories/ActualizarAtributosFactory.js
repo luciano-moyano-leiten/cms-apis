@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleActualizarAtributos } from '../handlers/atributos/handleActualizarAtributos.js';
+import { handleActualizarAtributos } from '../handlers/atributos/actualizarAtributoHandler.js';
 
 export class ActualizarAtributosFactory extends CMSFactoryInterface {
   createHandler() {

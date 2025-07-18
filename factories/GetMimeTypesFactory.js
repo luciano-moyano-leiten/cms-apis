@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetMimeTypes } from '../handlers/conttentSettings/handleGetMimeTypes.js';
+import { handleGetMimeTypes } from '../handlers/conttentSettings/getMimeTypesHandler.js';
 
 export class GetMimeTypesFactory extends CMSFactoryInterface {
   createHandler() {

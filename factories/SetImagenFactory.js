@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleSetImagen } from '../handlers/conttentSettings/handleSetImagen.js';
+import { handleSetImagen } from '../handlers/conttentSettings/setImagenHandler.js';
 
 export class SetImagenFactory extends CMSFactoryInterface {
   createHandler() {

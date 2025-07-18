@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleDeleteImagen } from '../handlers/conttentSettings/handleDeleteImagen.js';
+import { handleDeleteImagen } from '../handlers/conttentSettings/deleteImagenHandler.js';
 
 export class DeleteImagenFactory extends CMSFactoryInterface {
   createHandler() {

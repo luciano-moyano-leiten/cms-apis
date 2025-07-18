@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetEventos } from '../handlers/conttentSettings/handleGetEventos.js';
+import { handleGetEventos } from '../handlers/conttentSettings/getEventosHandler.js';
 
 export class GetEventosFactory extends CMSFactoryInterface {
   createHandler() {

@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { getUnidadesMedidaHandler } from '..//handlers/unidadesMedida/GetUnidadesMedida.js';
+import { getUnidadesMedidaHandler } from '../handlers/unidadesMedida/GetUnidadesMedida.js';
 
 export class GetUnidadesMedidaFactory extends CMSFactoryInterface {
   createHandler() {
