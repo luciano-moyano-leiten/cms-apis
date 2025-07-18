@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleComparativo } from '../handlers/comparativoHandler.js';
+import { handleComparativo } from '../handlers/conttentSettings/handleComparativo.js';
 
 export class ComparativoFactory extends CMSFactoryInterface {
   createHandler() {

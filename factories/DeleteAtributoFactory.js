@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleDeleteAtributo } from '../handlers/deleteAtributoHandler.js';
+import { handleDeleteAtributo } from '../handlers/atributos/handleDeleteAtributo.js';
 
 export class DeleteAtributoFactory extends CMSFactoryInterface {
   createHandler() {

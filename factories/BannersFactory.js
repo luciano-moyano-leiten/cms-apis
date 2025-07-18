@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleBanners } from '../handlers/bannersHandler.js';
+import { handleBanners } from '../handlers/conttentSettings/handleBanners.js';
 
 export class BannersFactory extends CMSFactoryInterface {
   createHandler() {

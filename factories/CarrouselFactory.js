@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleCarrousel } from '../handlers/carrouselHandler.js';
+import { handleCarrousel } from '../handlers/conttentSettings/handleCarrousel.js';
 
 export class CarrouselFactory extends CMSFactoryInterface {
   createHandler() {

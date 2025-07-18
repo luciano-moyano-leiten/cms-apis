@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleMenu } from '../handlers/getMenuHandler.js';
+import { handleMenu } from '../handlers/conttentSettings/handleMenu.js';
 
 export class MenuFactory extends CMSFactoryInterface {
   createHandler() {

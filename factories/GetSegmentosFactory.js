@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetSegmentos } from '../handlers/getSegmentosHandler.js';
+import { handleGetSegmentos } from '../handlers/atributos/handleGetSegmentos.js';
 
 export class GetSegmentosFactory extends CMSFactoryInterface {
   createHandler() {

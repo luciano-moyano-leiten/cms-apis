@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleContenidoFichaItem } from '../handlers/getContenidoFichaItemHandler.js';
+import { handleContenidoFichaItem } from '../handlers/conttentSettings/handleContenidoFichaItem.js';
 
 export class ContenidoFichaItemFactory extends CMSFactoryInterface {
   createHandler() {

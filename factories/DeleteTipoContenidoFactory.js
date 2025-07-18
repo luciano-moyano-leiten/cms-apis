@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleDeleteTipoContenido } from '../handlers/deleteTipoContenidoHandler.js';
+import { handleDeleteTipoContenido } from '../handlers/conttentSettings/handleDeleteTipoContenido.js';
 
 export class DeleteTipoContenidoFactory extends CMSFactoryInterface {
   createHandler() {

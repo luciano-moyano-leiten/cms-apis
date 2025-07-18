@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleContenidoFichaSucursalItem } from '../handlers/contenidoFichaSucursalItemHandler.js';
+import { handleContenidoFichaSucursalItem } from '../handlers/conttentSettings/handleContenidoFichaSucursalItem.js';
 
 export class ContenidoFichaSucursalItemFactory extends CMSFactoryInterface {
   createHandler() {

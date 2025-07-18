@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetMotorizacionesProductos } from '../handlers/getMotorizacionesProductosHandler.js';
+import { handleGetMotorizacionesProductos } from '../handlers/atributos/handleGetMotorizacionesProductos.js';
 
 export class GetMotorizacionesProductosFactory extends CMSFactoryInterface {
   createHandler() {

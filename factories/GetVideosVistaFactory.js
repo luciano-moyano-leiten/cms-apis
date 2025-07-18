@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetVideosVista } from '../handlers/getVideosVistaHandler.js';
+import { handleGetVideosVista } from '../handlers/conttentSettings/handleGetVideosVista.js';
 
 export class GetVideosVistaFactory extends CMSFactoryInterface {
   createHandler() {

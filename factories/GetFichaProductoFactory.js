@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetFichaProducto } from '../handlers/getFichaProductoHandler.js';
+import { handleGetFichaProducto } from '../handlers/conttentSettings/handleGetFichaProducto.js';
 
 export class GetFichaProductoFactory extends CMSFactoryInterface {
   createHandler() {

@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetImagen } from '../handlers/getImagenHandler.js';
+import { handleGetImagen } from '../handlers/conttentSettings/handleGetImagen.js';
 
 export class GetImagenFactory extends CMSFactoryInterface {
   createHandler() {

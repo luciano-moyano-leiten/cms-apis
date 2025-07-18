@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleVistas } from '../handlers/getVistasHandler.js';
+import { handleVistas } from '../handlers/conttentSettings/handleVistas.js';
 
 export class VistasFactory extends CMSFactoryInterface {
   createHandler() {

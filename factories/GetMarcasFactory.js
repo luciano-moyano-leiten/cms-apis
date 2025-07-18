@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetMarcas } from '../handlers/getMarcasHandler.js';
+import { handleGetMarcas } from '../handlers/atributos/handleGetMarcas.js';
 
 export class GetMarcasFactory extends CMSFactoryInterface {
   createHandler() {

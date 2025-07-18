@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetTiposProducto } from '../handlers/getTiposProductoHandler.js';
+import { handleGetTiposProducto } from '../handlers/atributos/getTiposProductoHandler.js';
 
 export class GetTiposProductoFactory extends CMSFactoryInterface {
   createHandler() {

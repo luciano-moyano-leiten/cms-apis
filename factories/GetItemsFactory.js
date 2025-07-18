@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetItems } from '../handlers/getItemsHandler.js';
+import { handleGetItems } from '../handlers/conttentSettings/handleGetItems.js';
 
 export class GetItemsFactory extends CMSFactoryInterface {
   createHandler() {

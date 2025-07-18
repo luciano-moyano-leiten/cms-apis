@@ -1,5 +1,5 @@
 import { CMSFactoryInterface } from './CMSFactoryInterface.js';
-import { handleGetTiposContenido } from '../handlers/getTiposContenidoHandler.js';
+import { handleGetTiposContenido } from '../handlers/conttentSettings/handleGetTiposContenido.js';
 
 export class GetTiposContenidoFactory extends CMSFactoryInterface {
   createHandler() {
