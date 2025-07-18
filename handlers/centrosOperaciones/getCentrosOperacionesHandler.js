@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { API_ENDOPOINT_CENTROS_OPERACIONES } from '../../config/apiConfig.js';
+import { API_ENDOPOINT_CENTROS_OPERACIONES } from '../atributos/apiConfig.js';
 import { getToken } from '../utils/tokenManager.js';
 
 export const getCentrosOperacionesHandler = async () => {
