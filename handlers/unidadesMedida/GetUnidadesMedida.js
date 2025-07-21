@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import { getToken } from '../utils/tokenManager.js';
 import { API_ENDPOINTS_UNIDAD_MEDIDA } from '../../config/apiConfig.js';
 
-export const getUnidadesMedidaHandler = async () => {
+export const handleGetUnidadesMedida = async () => {
   const url = `${API_ENDPOINTS_UNIDAD_MEDIDA.GET_UNIDADES_MEDIDA}`;
 
   const response = await fetch(url, {
